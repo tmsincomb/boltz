@@ -1328,6 +1328,7 @@ def predict(  # noqa: C901, PLR0915, PLR0912
             pairformer_args=asdict(pairformer_args),
             msa_args=asdict(msa_args),
             steering_args=asdict(steering_args),
+            weights_only=False,
         )
         model_module.eval()
 
@@ -1405,6 +1406,7 @@ def predict(  # noqa: C901, PLR0915, PLR0912
             msa_args=asdict(msa_args),
             steering_args=asdict(steering_args),
             affinity_mw_correction=affinity_mw_correction,
+            weights_only=False,
         )
         model_module.eval()
 

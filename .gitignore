@@ -167,3 +167,7 @@ cython_debug/
 #   All result files generated from a boltz prediction call
 boltz_results_*/
 *.md
+
+# Large YAML configs (exceed GitHub 100MB limit)
+boltz.yaml
+boltz_2025sep11.yaml

@@ -1,0 +1,10 @@
+version: 1
+sequences:
+  - protein:
+      id: 6y2d_A
+      sequence: SMNAVQEIMIPASKAGLVIGKGGETIKQLQERAGVKMVMIADKPLRITGDPYKVQQAKEMVLELIRD
+
+templates:
+  - pdb: /Users/tmsincomb/Scripps Research Dropbox/Troy Sincomb/repos/ForgeAb/vendor/ProteinMPNN/pdb_2025sep11/y2/6y2d.pdb1
+    chain_id: 6y2d_A
+    template_id: A1
