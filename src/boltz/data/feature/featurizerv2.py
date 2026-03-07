@@ -1731,14 +1731,14 @@ def compute_template_features(
 
     # Set visibility_id for templated chains
     for asym_id, pdb_id in asym_id_to_pdb_id.items():
-        indices = (query_tokens.tokens["asym_id"] == asym_id).nonzero()
+        indices = (query_tokens.tokens["asym_id"] == asym_id).nonzero()[0]
         visibility_ids[indices] = pdb_id
 
     # Set visibility for non templated chain + olygomerics
     for asym_id in np.unique(query_tokens.structure.chains["asym_id"]):
         if asym_id not in asym_id_to_pdb_id:
             # We hack the chain id to be negative to not overlap with the above
-            indices = (query_tokens.tokens["asym_id"] == asym_id).nonzero()
+            indices = (query_tokens.tokens["asym_id"] == asym_id).nonzero()[0]
             visibility_ids[indices] = -1 - asym_id
 
     # Convert to one-hot
